@@ -32,7 +32,6 @@ $e = &$modx->Event;
 
 /*List documents box*/
 if($e->name == ''.$ListBoxEvoEvent.'') {
-if ($ListBox == yes) {
 $parentId = $ParentFolder;
 $dittototal = $ListItems;
 	if ($ListMode == advanced) {
@@ -57,7 +56,6 @@ $params['hideFolders'] = '0';
 $list = $modx->runSnippet('Ditto', $params);
 $ListOutput = '<div class="'.$ListBoxSize.'"><div class="sectionHeader"><i class="fa fa-pencil"></i> '.$ListBoxTitle.'<a href="javascript:void(null);" onclick="doHideShow(\'idShowHideListBoxWidget2\');"><i class="fa fa-bars expandbuttn"></i></a></div>
 <div id="idShowHideListBoxWidget2" class="dashboard-block-content sectionBody"><ul>'.$list.'</ul><br style="clear:both;height:1px;margin-top: -1px;line-height:1px;font-size:1px;" /> </div></div>';
-}
 }
 //end list
 $output = $ListOutput;
