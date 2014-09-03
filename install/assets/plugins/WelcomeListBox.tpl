@@ -2,7 +2,7 @@
 /**
  * WelcomeListBox
  *
- * Additional Dashboard List Documents box widget for OnManagerWelcomeCustom
+ * Additional Dashboard List Documents box widget for EvoDashboard
  *
  * @author    Nicola Lambathakis
  * @category    plugin
