@@ -23,4 +23,4 @@ OnManagerWelcomeHome
 ****
 */
 // Run the main code
-include($modx->config['base_path'].'assets/plugins/welcomedocumentslistbox/documentslistbox.php');
+include($modx->config['base_path'].'assets/plugins/welcomelistbox/listbox.php');
