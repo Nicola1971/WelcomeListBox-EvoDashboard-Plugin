@@ -18,7 +18,6 @@ $datasizey = isset($datasizey) ? $datasizey : '2';
 //output
 $WidgetOutput = isset($WidgetOutput) ? $WidgetOutput : '';
 //events
-$EvoEvent = isset($EvoEvent) ? $EvoEvent : 'OnManagerWelcomeHome';
 
 $tablefields = isset($tablefields) ? $tablefields : '[+longtitle+],[+description+],[+introtext+],[+documentTags+]';
 $tableheading = isset($tableheading) ? $tableheading : 'Long Title,Description,Introtext,Tags';
