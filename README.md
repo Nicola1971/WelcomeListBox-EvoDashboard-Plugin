@@ -9,5 +9,4 @@ EvoDashboard: https://github.com/Nicola1971/EvoDashboard-plugin
 More infos:
 http://www.tattoocms.it/extras/plugins/welcomelistbox-dashboard-widget.html
 
-##List Documents box widget
-![List Documents box](https://github.com/Nicola1971/training-materials/blob/master/Images/listbox/listbox-widget.jpg)
+
