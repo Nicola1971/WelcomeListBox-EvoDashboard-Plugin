@@ -38,7 +38,7 @@ $output = "";
 $e = &$modx->Event;
 
 /*List documents box*/
-if($e->name == ''.$EvoEvent.'') {
+if($e->name == 'OnManagerWelcomePrerender') {
 $parentId = $ParentFolder;
 $dittototal = $ListItems;
 $rowTpl = '@CODE: <tr>
