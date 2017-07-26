@@ -1,6 +1,6 @@
 <?php
 /******
-WelcomeDocumentsListBox 3.1 RC
+WelcomeDocumentsListBox 3.1.3 RC
  * 
 &WidgetTitle= Widget title:;string;List Documents &WidgetIcon= Widget Icon:;string;fa-pencil &ParentFolder=Parent folder for List documents:;string;2,15 &ListItems=Max items in List:;string;20 &tablefields= Tv Fields:;string;[+longtitle+],[+description+],[+introtext+],[+documentTags+] &tableheading=TV  heading:;string;Long Title,Description,Introtext,Tags &hideFolders= Hide Folders:;list;yes,no;yes &showPublishedOnly= Show Published Only:;list;yes,no;no &dittolevel= Depht:;string;1 &showMoveButton= Show Move Button:;list;yes,no;yes &showPublishButton= Show Publish Button:;list;yes,no;yes &showDeleteButton= Show Delete Button:;list;yes,no;yes &datarow= widget row position:;list;1,2,3,4,5,6,7,8,9,10;2 &datacol= widget col position:;list;1,2,3,4;1 &datasizex= widget x size:;list;1,2,3,4;2 &datasizey= widget y size:;list;1,2,3,4,5,6,7,8,9,10;4 &WidgetID= Unique Widget ID:;string;DocListBox 
 
@@ -45,29 +45,29 @@ $rowTpl = '@CODE: <tr>
 <td data-toggle="collapse" data-target=".collapse'.$WidgetID.'[+id+]"> <span class="label label-info">[+id+]</span></td>
 <td><a class="[[if? &is=`[+published+]:=:0` &then=`unpublished`]]" href="index.php?a=27&id=[+id+]" title="edit">[+pagetitle+]</a></td>
 <td>[+date+]</td>
-<td style="text-align: right;">
-<a class="btn btn-xs btn-success btn-action" href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o"></i></a> 
-<a class="btn btn-xs btn-info btn-action" href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye"></i></a>
+<td style="text-align: right;" class="actions">
+<a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o"></i></a> 
+<a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye"></i></a>
 ';
 if ($showMoveButton == yes) { 
-$rowTpl .= '<a class="btn btn-xs btn-move btn-action" href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows"></i></a>';
+$rowTpl .= '<a href="index.php?a=51&id=[+id+]" title="move"><i class="fa fa-arrows"></i></a>';
 }
 if ($showPublishButton == yes) { 
 $rowTpl .= '[[if? &is=`[+published+]:=:1` &then=` 
-<a class="btn btn-xs btn-warning btn-action" href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-arrow-down"></i></a> 
+<a href="index.php?a=62&id=[+id+]" title="unpublish"><i class="fa fa-arrow-down"></i></a> 
 `&else=`
-<a class="btn btn-xs btn-primary btn-action" href="index.php?a=62&id=[+id+]" title="publish"><i class="fa fa-arrow-up"></i></a> 
+<a href="index.php?a=62&id=[+id+]" title="publish"><i class="fa fa-arrow-up"></i></a> 
 `]]';
 }
  
 if ($showDeleteButton == yes) { 
-$rowTpl .= '<a class="btn btn-xs btn-danger btn-action" href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o"></i></a> ';
+$rowTpl .= '<a href="index.php?a=6&id=[+id+]" title="delete"><i class="fa fa-trash-o"></i></a> ';
 }
 
-$rowTpl .= '<button class="btn btn-xs btn-default btn-expand btn-action" title="' . $_lang["resource_overview"] . '" data-toggle="collapse" data-target=".collapse'.$WidgetID.'[+id+]"><i class="fa fa-info" aria-hidden="true"></i></button></td>
+$rowTpl .= '<a class="resource_overview" title="' . $_lang["resource_overview"] . '" data-toggle="collapse" data-target=".collapse'.$WidgetID.'[+id+]"><i class="fa fa-info" aria-hidden="true"></i></a></td>
 
 </tr>
-<tr><td colspan="4" class="hiddenRow"><div class="resource-overview-accordian collapse collapse'.$WidgetID.'[+id+]"><div class="overview-body small"><ul>        
+<tr><td colspan="4" class="hiddenRow"><div class="resource-overview-accordian collapse collapse'.$WidgetID.'[+id+]"><div class="overview-body"><ul>        
 '.$thtdfields.'
 
 </ul>
@@ -116,7 +116,9 @@ $WidgetOutput = '
                       </div>
                       
                       <div class="panel-body widget-stage sectionBody">
-     <table class="table table-hover table-condensed">'.$list.'</table>
+                      <div class="table-responsive">
+				<table class="table data">
+'.$list.'</table></div>
                       </div>
                     </div>   
          
