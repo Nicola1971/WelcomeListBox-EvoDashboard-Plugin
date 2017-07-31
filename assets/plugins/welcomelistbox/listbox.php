@@ -57,7 +57,7 @@ $dittototal = $ListItems;
 $rowTpl = '@CODE: <tr>
 <td data-toggle="collapse" data-target=".collapse'.$WidgetID.'[+id+]"> <span class="label label-info">[+id+]</span></td>
 <td><a class="[[if? &is=`[+published+]:=:0` &then=`unpublished`]]" href="index.php?a=27&id=[+id+]" title="edit">[+pagetitle+]</a></td>
-<td>[+date+]</td>
+<td class="text-right text-nowrap">[+date+]</td>
 <td style="text-align: right;" class="actions">
 <a href="index.php?a=27&id=[+id+]" title="edit"><i class="fa fa-pencil-square-o"></i></a> 
 <a href="[(site_url)]index.php?id=[+id+]" target="_blank" title="preview"><i class="fa fa-eye"></i></a>
@@ -122,7 +122,7 @@ $WidgetOutput = '
   color: #ccc!important;
 }
 .btn-group .panel-setting:hover {
-  color: #3d7bea;
+  color: #444!important;
   border:none;
 }
  div.overview-body {border:0;padding:0;border:none!important;}
@@ -153,7 +153,7 @@ a.resource_overview {margin-left:3px;}
 						<tr>
 							<th style="width: 1%">[%id%]</th>
 							<th>[%resource_title%]</th>
-							<th style="width: 14%">[%page_data_edited%]</th>
+							<th style="width: 1%">[%page_data_edited%]</th>
 							<th style="width: 1%; text-align: center">[%mgrlog_action%]</th>
 						</tr>
 					</thead>
