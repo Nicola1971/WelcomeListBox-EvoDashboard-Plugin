@@ -114,8 +114,20 @@ $WidgetOutput = '
  <style>
  .btn-move{background-color: #CC99FF;}
  .btn-move:hover{background-color: #B266FF; color: #FFF;}
+  .btn-group .panel-setting {
+  margin-top : -7px;
+  background:transparent;
+  border:none!important;
+  outline: 0;
+  color: #ccc!important;
+}
+.btn-group .panel-setting:hover {
+  color: #3d7bea;
+  border:none;
+}
  div.overview-body {border:0;padding:0;border:none!important;}
 .resource-overview-accordian {border:0;padding:3px 0 3px -5px;}
+#wdg_'.$WidgetID.' .panel-body {padding:0;}
 #wdg_'.$WidgetID.' .table.data tbody tr:not(:hover) { background-color: #fff }
 #wdg_'.$WidgetID.' .table.data tbody tr:nth-child(4n+1):not(:hover) { background-color: #f6f8f8 }
 #wdg_'.$WidgetID.' .table.data tbody tr:nth-child(2n) { background-color: #fff }
@@ -134,7 +146,7 @@ a.resource_overview {margin-left:3px;}
                             </div>
                       </div>
                       
-                      <div class="panel-body card-block">
+                      <div class="panel-body widget-stage sectionBody card-block">
                       <div class="table-responsive">
 				<table class="table data">
                 <thead>
